@@ -126,7 +126,7 @@ export function applyNodeProps(instance, props, oldProps = EMPTY_PROPS) {
 }
 
 export function updatePicture(node) {
-  if (!Konva.autoDrawEnabled) {
+  if (false /*!Konva.autoDrawEnabled*/) {
     var drawingNode = node.getLayer() || node.getStage();
     drawingNode && drawingNode.batchDraw();
   }
